@@ -5,7 +5,7 @@ document.getElementById('translate').addEventListener('click', () => {
 		.then(response => response.json())
 		.then(data => (document.getElementById('output').innerHTML = data.contents.translated))
 		.catch(err => {
-			alert('Too many requests buddy, you need to wait for an hour');
+			alert('API request limit reached 😭 \n Try again tomorrow');
 			console.log(err.code);
 		});
 });
